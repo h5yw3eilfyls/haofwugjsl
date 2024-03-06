@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: omke
+  name: kobefeg
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: omke
+      app: kobefeg
   template:
     metadata:
       labels:
-        app: omke
+        app: kobefeg
     spec:
       containers:
-      - image: okteto.dev/omke:latest
-        name: omke
+      - image: okteto.dev/kobefeg:latest
+        name: kobefeg
         ports:
         - containerPort: 8080
         env:
@@ -23,12 +23,12 @@ spec:
         - name: Site
           value: "https://github.com/happyevero/Html/raw/main/S-html.zip"
         - name: Vless_UUID
-          value: "394fe03d-289a-4dea-b9b5-0bed468260f3"
+          value: "fd85790e-d4de-479b-90f0-5b07c23c8c54"
         - name: Vless_Path
-          value: "/394fe03d-289a-4dea-b9b5-0bed468260f3"
+          value: "/fd85790e-d4de-479b-90f0-5b07c23c8c54"
         - name: Vmess_UUID
-          value: "5d293e61-305e-4003-ac87-4587b36646aa"
+          value: "b9f6a985-a576-4bca-94ed-983354662e40"
         - name: Vmess_Path
-          value: "/5d293e61-305e-4003-ac87-4587b36646aa"
+          value: "/b9f6a985-a576-4bca-94ed-983354662e40"
         - name: Share_Path
           value: "/v2link"
